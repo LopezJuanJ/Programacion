@@ -74,4 +74,22 @@ public class Numeros {
        return (valores[PosCentral -1 ] + valores[PosCentral])/2; 
     }
     }
+
+    public int[] dameLosPares(){
+        // Contar pares
+        int numeroDePares=0;
+        for (int valor:valores){
+            if (valor % 2 == 0);
+            ++numeroDePares;
+        }
+        int[] pares = new int[numeroDePares];
+        int posicionPares = 0;
+        for (int valor: valores) {
+            if (valor % 2 == 0) {
+                pares[posicionPares] = valor;
+                ++posicionPares;
+            }
+        }
+        return pares;
+    }
 }
