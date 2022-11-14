@@ -7,9 +7,9 @@ public class Numeros {
     // Propiedades
     private int[] valores;
 
-    public Numeros(int[] valores) {
-        this.valores = valores;
-    }
+    // public Numeros(int[] valores) {
+    //     this.valores = valores;
+    // }
 
     public void asignaValores(int[] valores) {
         this.valores = valores;
@@ -95,16 +95,43 @@ public class Numeros {
         return pares;
     }
 
-    public boolean ObtenerPrimos() {
-        for (int i = 0; i < valores.length; i++) {
-            if (valores[i] == 0 || valores[i] == 1) {
-                return false;
-            } else if (valores[i] % 2 == 0) {
-                return false;
-            } else {
-                return true;
+    public boolean saberSiEsPrimo(int numeroComprobar) {
+    boolean res = true;
+        if (numeroComprobar == 0 || numeroComprobar == 1){
+            res = false;
+        }else {
+            for (int i=numeroComprobar-1; i > 1; i--){
+                if(numeroComprobar % i ==0 ){
+                    res = false;
+                }
             }
         }
-        return ObtenerPrimos();
+        return res;
     }
+
+    public int numerodeprimos(){
+        int contador= 0;
+        for (int i=0; i< valores.length;i++){
+            if (saberSiEsPrimo(i) == true){
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    public int[] guardarPrimos(){
+        int[] primos = new int[numerodeprimos()];
+        int contador = 0;
+        for (int i=0; i< valores.length;i++){
+            if (saberSiEsPrimo(i) == true){
+                contador++;
+                primos[contador] = saberSiEsPrimo(i);
+
+            }
+        }
+        return primos;
+    }
+    
+
+       
 }
