@@ -7,13 +7,14 @@ public class Numeros {
     // Propiedades
     private int[] valores;
 
-    public Numeros(int[] valores ) {
+    public Numeros(int[] valores) {
         this.valores = valores;
     }
 
     public void asignaValores(int[] valores) {
         this.valores = valores;
     }
+
     public int[] dameValores() {
         return valores;
     }
@@ -21,29 +22,29 @@ public class Numeros {
     // Contructor
     public int mayor() {
         int mayor = valores[0];
-        
+
         // Recorre los numeros hasta encontrar el numero mayor
         for (int i = 0; i < valores.length; i++) {
-            if (mayor < valores[i]){
-                mayor = valores[i]; 
+            if (mayor < valores[i]) {
+                mayor = valores[i];
             }
         }
-        
+
         // Devuelve la variable una vez acabo
         return mayor;
     }
-    
+
     // Contructor
     public int menor() {
         int menor = valores[0];
-        
+
         // Recorre los numeros hasta encontrar el numero menor
         for (int i = 0; i < valores.length; i++) {
-            if (menor > valores[i]){
-                menor = valores[i]; 
+            if (menor > valores[i]) {
+                menor = valores[i];
             }
         }
-        
+
         // Devuelve la variable una vez acabo
         return menor;
     }
@@ -59,37 +60,51 @@ public class Numeros {
     }
 
     public double mediana() {
-        if (valores.length % 2 != 0){ 
-        // Caso 1 Long Impar
-        // 1.Ordenar la lista
-        Arrays.sort(valores); 
-       int PosCentral = valores.length / 2;
-       return valores[PosCentral];
-    } else { 
-       
-       // Caso 2 Long Par
-       // 1.Ordenar la lista
-       Arrays.sort(valores); 
-       int PosCentral = valores.length / 2;
-       return (valores[PosCentral -1 ] + valores[PosCentral])/2; 
-    }
+        if (valores.length % 2 != 0) {
+            // Caso 1 Long Impar
+            // 1.Ordenar la lista
+            Arrays.sort(valores);
+            int PosCentral = valores.length / 2;
+            return valores[PosCentral];
+        } else {
+
+            // Caso 2 Long Par
+            // 1.Ordenar la lista
+            Arrays.sort(valores);
+            int PosCentral = valores.length / 2;
+            return (valores[PosCentral - 1] + valores[PosCentral]) / 2;
+        }
     }
 
-    public int[] dameLosPares(){
+    public int[] dameLosPares() {
         // Contar pares
-        int numeroDePares=0;
-        for (int valor:valores){
-            if (valor % 2 == 0);
+        int numeroDePares = 0;
+        for (int valor : valores) {
+            if (valor % 2 == 0)
+                ;
             ++numeroDePares;
         }
         int[] pares = new int[numeroDePares];
         int posicionPares = 0;
-        for (int valor: valores) {
+        for (int valor : valores) {
             if (valor % 2 == 0) {
                 pares[posicionPares] = valor;
                 ++posicionPares;
             }
         }
         return pares;
+    }
+
+    public boolean ObtenerPrimos() {
+        for (int i = 0; i < valores.length; i++) {
+            if (valores[i] == 0 || valores[i] == 1) {
+                return false;
+            } else if (valores[i] % 2 == 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        return ObtenerPrimos();
     }
 }
