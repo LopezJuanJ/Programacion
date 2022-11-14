@@ -4,11 +4,15 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Numeros numeros = new Numeros(new int[] { 1, 2, 3 });
-        System.out.println(numeros.dameValores().length);
-        System.out.println("El array es: " + Arrays.toString(numeros.dameValores()));
-        System.out.println("La media es: " + numeros.media());
-        System.out.println("La mediana es: " + numeros.mediana());
-        System.out.println("Primos: " + numeros.ObtenerPrimos());
+        int[] temp = {3, 2, 1, 222, 11};
+        
+        Numeros num = new Numeros();
+        num.asignaValores(temp);
+        System.out.println(num.dameValores().length);
+        System.out.println("El array es: " + Arrays.toString(num.dameValores()));
+        System.out.println("La media es: " + num.media());
+        System.out.println("La mediana es: " + num.mediana());
+        System.out.println("Cuantos Primos Hay?: " + num.numerodeprimos());
+     
     }
 }
