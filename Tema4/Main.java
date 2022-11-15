@@ -1,5 +1,4 @@
 package Tema4;
-
 import java.util.Arrays;
 
 public class Main {
@@ -13,6 +12,6 @@ public class Main {
         System.out.println("La media es: " + num.media());
         System.out.println("La mediana es: " + num.mediana());
         System.out.println("Cuantos Primos Hay?: " + num.numerodeprimos());
-     
+        System.out.println(Arrays.toString(num.guardarPrimos()));
     }
 }

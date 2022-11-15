@@ -124,9 +124,8 @@ public class Numeros {
         int contador = 0;
         for (int i=0; i< valores.length;i++){
             if (saberSiEsPrimo(i) == true){
+                primos[contador] = valores[i];
                 contador++;
-                primos[contador] = saberSiEsPrimo(i);
-
             }
         }
         return primos;
