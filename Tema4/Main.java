@@ -19,8 +19,7 @@ public class Main {
         System.out.println("Insertar numero al Principio: " + Arrays.toString(num.insertarnumeroPrincipio(24)));
         System.out.println("Comprobar si existe: " + num.saberSiExiste(1));
         System.out.println("Comprobar si existe: " + num.saberSiExiste(0));
-        System.out.println(Arrays.toString(num.moveralfinal(2)));
-
+System.out.println(Arrays.toString(num.borrarPosicion(2)));
         
 
 

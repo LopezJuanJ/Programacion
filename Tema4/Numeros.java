@@ -189,22 +189,13 @@ public class Numeros {
             return res;
         }
 
-    public int[] moveralfinal(int numeroAComprobar){
+    public int[] borrarPosicion(int posi){
+        int value = posi -1;
+        int[] nuevoArr= new int[valores.length -1];
+        for (int i = 0; i < valores[value];i++){
+            nuevoArr[i]= valores[i];
+        }
 
-            int tamañoArray = valores.length;
-            int[] nuevoArray = new int[tamañoArray];
-            int[] arrTemporal = new int[1];
-            for (int i = 0; i < valores.length; i++){
-                nuevoArray[i] = valores[i];
-            }
-            for (int i = 0; i < nuevoArray.length;i++ ){
-                if (nuevoArray[i] == numeroAComprobar){
-                    arrTemporal[0] = numeroAComprobar;
-                    nuevoArray[i]= 0;    
-                } 
-                }
-            
-                return nuevoArray;
-            }
-
+        return nuevoArr;
+    }
 }
