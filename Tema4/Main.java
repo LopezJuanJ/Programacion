@@ -13,7 +13,10 @@ public class Main {
         System.out.println("La mediana es: " + num.mediana());
         System.out.println("Cuantos Primos Hay?: " + num.numerodeprimos());
         System.out.println("Primos de la lista: "+ Arrays.toString(num.guardarPrimos()));
-        System.out.println("Nuevo Array de inicio: " + Arrays.toString(num.insertarnumeroPrincio(24,2)));
-        System.out.println("Nuevo Array de final: " + Arrays.toString(num.insertarnumeroFinal(24,2)));
+        System.out.println("Array insertando palabra: " + Arrays.toString(num.insertarnumero(24)));
+        System.out.println("Insertar Numero posicion concreta: " + Arrays.toString(num.insertarnumeroposicion(24,2)));
+        System.out.println("Insertar numero al Final: " + Arrays.toString(num.insertarnumeroFinal(24)));
+        System.out.println("Insertar numero al Principio: " + Arrays.toString(num.insertarnumeroPrincipio(24)));
+
     }
 }

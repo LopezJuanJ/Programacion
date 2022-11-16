@@ -130,8 +130,19 @@ public class Numeros {
         }
         return primos;
     }
+    public int[] insertarnumero(int numeroAInsertar){
+        
+        int tamañoinicial = valores.length;
+        int tamañoNuevo = valores.length +1;
+        int[] nuevoArray = new int[tamañoNuevo];
+        for (int i = 0; i < valores.length; i++){
+            nuevoArray[i] = valores[i];
+        }
+        nuevoArray[tamañoinicial] = numeroAInsertar;
+        return nuevoArray;
+    }
     
-    public int[] insertarnumeroPrincio(int numeroAInsertar, int posicion){
+    public int[] insertarnumeroposicion(int numeroAInsertar, int posicion){
         
         int tamañoinicial = valores.length;
         int tamañoNuevo = valores.length +1;
@@ -143,16 +154,26 @@ public class Numeros {
         nuevoArray[posicion]=numeroAInsertar;
         return nuevoArray;
     }
-    public int[] insertarnumeroFinal(int numeroAInsertar, int posicion){
+    public int[] insertarnumeroPrincipio(int numeroAInsertar){
+        
+        int tamañoinicial = valores.length;
+        int tamañoNuevo = tamañoinicial +1;
+        int[] nuevoArray = new int[tamañoNuevo];
+        for (int i = 0; i < valores.length; i++){
+            nuevoArray[i + 1] = valores[i];
+        }
+        nuevoArray[0]=numeroAInsertar;
+        return nuevoArray;
+    }
+    public int[] insertarnumeroFinal(int numeroAInsertar){
         
         int tamañoinicial = valores.length;
         int tamañoNuevo = valores.length +1;
-        int posicionfinal = tamañoinicial - posicion;
+        int posicionfinal = tamañoinicial;
         int[] nuevoArray = new int[tamañoNuevo];
         for (int i = 0; i < valores.length; i++){
             nuevoArray[i] = valores[i];
         }
-        nuevoArray[tamañoinicial] = nuevoArray[posicion];
         nuevoArray[posicionfinal]=numeroAInsertar;
         return nuevoArray;
     }
