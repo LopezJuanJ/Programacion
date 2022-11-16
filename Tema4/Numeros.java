@@ -189,4 +189,22 @@ public class Numeros {
             return res;
         }
 
+    public int[] moveralfinal(int numeroAComprobar){
+
+            int tamañoArray = valores.length;
+            int[] nuevoArray = new int[tamañoArray];
+            int[] arrTemporal = new int[1];
+            for (int i = 0; i < valores.length; i++){
+                nuevoArray[i] = valores[i];
+            }
+            for (int i = 0; i < nuevoArray.length;i++ ){
+                if (nuevoArray[i] == numeroAComprobar){
+                    arrTemporal[0] = numeroAComprobar;
+                    nuevoArray[i]= 0;    
+                } 
+                }
+            
+                return nuevoArray;
+            }
+
 }
