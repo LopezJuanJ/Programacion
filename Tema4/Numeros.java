@@ -131,6 +131,15 @@ public class Numeros {
         return primos;
     }
     
-
+    public int[] insertarnumero(int numeroAInsertar){
+        int tamañoinicial = valores.length;
+        int tamañoNuevo = valores.length +1;
+        int[] nuevoArray = new int[tamañoNuevo];
+        for (int i = 0; i < valores.length; i++){
+            nuevoArray[i] = valores[i];
+        }
+        nuevoArray[tamañoinicial]=numeroAInsertar;
+        return nuevoArray;
+    }
        
 }

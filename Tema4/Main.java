@@ -13,5 +13,6 @@ public class Main {
         System.out.println("La mediana es: " + num.mediana());
         System.out.println("Cuantos Primos Hay?: " + num.numerodeprimos());
         System.out.println("Primos de la lista: "+ Arrays.toString(num.guardarPrimos()));
+        System.out.println("Nuevo Array: " + Arrays.toString(num.insertarnumero(10)));
     }
 }
