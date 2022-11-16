@@ -2,6 +2,7 @@ package Tema4;
 
 import java.util.Arrays;
 
+
 public class Numeros {
 
     // Propiedades
@@ -178,4 +179,14 @@ public class Numeros {
         return nuevoArray;
     }
        
+    public boolean saberSiExiste(int numeroAComprobar){
+        boolean res= false;
+        for (int i = 0; i < valores.length;i++ ){
+            if (valores[i] == numeroAComprobar){
+                res = true;
+            } 
+            }
+            return res;
+        }
+
 }

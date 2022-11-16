@@ -17,6 +17,7 @@ public class Main {
         System.out.println("Insertar Numero posicion concreta: " + Arrays.toString(num.insertarnumeroposicion(24,2)));
         System.out.println("Insertar numero al Final: " + Arrays.toString(num.insertarnumeroFinal(24)));
         System.out.println("Insertar numero al Principio: " + Arrays.toString(num.insertarnumeroPrincipio(24)));
+        
 
     }
 }
