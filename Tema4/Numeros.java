@@ -195,6 +195,10 @@ public class Numeros {
         for (int i = 0; i < valores[value];i++){
             nuevoArr[i]= valores[i];
         }
+        for (int i =posi+1; i < valores[value];i++){
+            nuevoArr[i]= valores[i];
+        }
+
 
         return nuevoArr;
     }
