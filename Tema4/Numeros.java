@@ -188,18 +188,4 @@ public class Numeros {
             }
             return res;
         }
-
-    public int[] borrarPosicion(int posi){
-        int value = posi -1;
-        int[] nuevoArr= new int[valores.length -1];
-        for (int i = 0; i < valores[value];i++){
-            nuevoArr[i]= valores[i];
-        }
-        for (int i =posi+1; i < valores[value];i++){
-            nuevoArr[i]= valores[i];
-        }
-
-
-        return nuevoArr;
-    }
 }
