@@ -5,6 +5,7 @@ public class Aula {
     public int numero;
     public int capaalumnos;
     public String[] materiales;
+    
     public Aula(String nombre, int numero, int capaalumnos, String[] materiales) {
         this.nombre = nombre;
         this.numero = numero;

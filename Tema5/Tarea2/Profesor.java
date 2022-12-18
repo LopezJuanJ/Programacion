@@ -11,6 +11,7 @@ public class Profesor {
     public int telefono;
     public String mail;
     public String direccion;
+
     public Profesor(Modulo[] modulos, String nombre, String apellido, String dni, Date fecha, int telefono, String mail,
             String direccion) {
         this.modulos = modulos;
@@ -22,6 +23,7 @@ public class Profesor {
         this.mail = mail;
         this.direccion = direccion;
     }
+    
     public Modulo[] getModulos() {
         return modulos;
     }

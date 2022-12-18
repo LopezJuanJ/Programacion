@@ -44,6 +44,8 @@ public class Ciclo {
     public String getTipo() {
         return tipo;
     }
+
+    // saber tipo de ciclo
     public void setTipo(char tipo) {
         if (tipo == TIPOMODULAR) {
             this.tipo = "modular";
@@ -56,6 +58,7 @@ public class Ciclo {
         }
     }
 
+    // saber cuantos cursos tiene
     public void numerocursos(int cursos){
         if (cursos < 2 || cursos > 3 ){
             System.out.println("Error");

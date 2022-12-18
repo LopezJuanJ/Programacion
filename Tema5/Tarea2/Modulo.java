@@ -12,7 +12,7 @@ public class Modulo {
         this.numerohoras = numerohoras;
         this.cursoasignado = cursoasignado;
     }
-
+    // saber a que curso esta asignado
     public void cursosasig(int cursoasignado){
         if (cursoasignado < 1 || cursoasignado > 3 ){
             System.out.println("Error");
