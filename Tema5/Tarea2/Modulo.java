@@ -5,12 +5,22 @@ public class Modulo {
     public int codigo;
     public int numerohoras;
     public int cursoasignado;
+    
     public Modulo(String nombre, int codigo, int numerohoras, int cursoasignado) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.numerohoras = numerohoras;
         this.cursoasignado = cursoasignado;
     }
+
+    public void cursosasig(int cursoasignado){
+        if (cursoasignado < 1 || cursoasignado > 3 ){
+            System.out.println("Error");
+        } else {
+            this.cursoasignado = cursoasignado;
+        }
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -34,5 +44,10 @@ public class Modulo {
     }
     public void setCursoasignado(int cursoasignado) {
         this.cursoasignado = cursoasignado;
+    }
+    @Override
+    public String toString() {
+        return "Modulo [nombre=" + nombre + ", codigo=" + codigo + ", numerohoras=" + numerohoras + ", cursoasignado="
+                + cursoasignado + "]";
     }
 }
