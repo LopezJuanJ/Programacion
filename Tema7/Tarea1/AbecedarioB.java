@@ -2,10 +2,11 @@ package Tema7.Tarea1;
 
 import java.util.Iterator;
 
-public class Abecedario implements Iterable<Character> {
+public class AbecedarioB implements Iterable<Character> {
     public char[] abecedario = {'a', 'b', 'c','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    public char[] vocales = {'a', 'e', 'i', 'o', 'u'};
     public int indice = 0;
-    
+
 
     @Override
     public AbcIterator iterator() {
@@ -23,6 +24,15 @@ public class Abecedario implements Iterable<Character> {
         public Character next() {
             return abecedario[indice++];
         }
+
+        public boolean hasNextVocal() { 
+            return  indice < vocales.length;
+        }
+
+        public Character nextVocal() {
+            return vocales[indice++];
+        }
+
 
        
     }
