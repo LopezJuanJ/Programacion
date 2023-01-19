@@ -5,7 +5,7 @@ import java.util.Iterator;
 public class AbecedarioB implements Iterable<Character> {
     public char[] abecedario = {'a', 'b', 'c','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     public char[] vocales = {'a', 'e', 'i', 'o', 'u'};
-    public int indice = 0;
+   
 
 
     @Override
@@ -14,6 +14,7 @@ public class AbecedarioB implements Iterable<Character> {
     }
 
     class AbcIterator implements Iterator<Character> {
+        public int indice = 0;
 
         @Override
         public boolean hasNext() { 
