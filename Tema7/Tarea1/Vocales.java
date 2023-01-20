@@ -1,26 +1,23 @@
 package Tema7.Tarea1;
 
-import java.util.Iterator;
 
-public class Vocales extends Abecedario {
+public class Vocales extends AbecedarioB {
 
-    private char[] vocales = {'a', 'e', 'i', 'o', 'u'};
-
-
-    public Iterator<Character> iterator() {
+    @Override
+    public AbcIterator iterator() {
         return new VocalesIterator();
     }
 
-    class VocalesIterator implements Iterator<Character> {
+    class VocalesIterator extends AbcIterator {
         private int indice = 0;
 
         public boolean hasNext() {
-            return indice < vocales.length;
+            return indice < AbecedarioB.getVocales().length;
         }
 
 
         public Character next() {
-            return vocales[indice++];
+            return AbecedarioB.getVocales()[indice++];
         }
     }
 }

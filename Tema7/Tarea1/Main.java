@@ -5,6 +5,7 @@ public class Main {
         Abecedario ob1 = new Abecedario();
         AbecedarioB ob2 = new AbecedarioB();
         AbecedarioB.AbcIterator iter = ob2.iterator();
+        Vocales ob3 = new Vocales();
 
         for (Character x : ob1) {
             System.out.println("Caracter: " + x);
@@ -24,7 +25,10 @@ public class Main {
         while (iter.hasNextVocal()) {
             System.out.println("Vocal: " + iter.nextVocal());
         }
-
+        System.out.println("---------------------------------");
+        for (char x : ob3) {
+            System.out.println("Vocal: " + x);
+        }
 
     }
 }
