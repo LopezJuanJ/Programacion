@@ -1,4 +1,4 @@
-package Tema8;
+package Tema8.Tarea1;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
