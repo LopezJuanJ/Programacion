@@ -1,0 +1,66 @@
+package org.example;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Main {
+    public static void main(String[] args) {
+        MarcoBotones marco1 = new MarcoBotones();
+        marco1.setVisible(true);
+        marco1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
+
+class MarcoBotones extends JFrame {
+    public MarcoBotones() {
+        setTitle("Botones y Eventos");
+        setBounds(700, 300, 500, 500);
+        LaminaBotones milamina = new LaminaBotones();
+        add(milamina);
+    }
+}
+
+class LaminaBotones extends JPanel implements ActionListener {
+
+    JTextField cuadroTexto = new JTextField(20);
+
+    JRadioButton botonRosa = new JRadioButton("rosa");
+    JRadioButton botonNegro = new JRadioButton("negro");
+    JRadioButton botonAzul = new JRadioButton("azul");
+
+    public LaminaBotones() {
+        add(botonRosa);
+        add(botonNegro);
+        add(botonAzul);
+        add(cuadroTexto);
+
+        ButtonGroup grupoColores = new ButtonGroup();
+        grupoColores.add(botonRosa);
+        grupoColores.add(botonNegro);
+        grupoColores.add(botonAzul);
+
+        botonRosa.addActionListener(this);
+        botonNegro.addActionListener(this);
+        botonAzul.addActionListener(this);
+        cuadroTexto.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object botonPulsado = e.getSource();
+        String textoIngresado = cuadroTexto.getText().toLowerCase();
+
+        if (botonPulsado == botonRosa || textoIngresado.equals("rosa")) {
+            setBackground(Color.PINK);
+            botonRosa.setSelected(true);
+        } else if (botonPulsado == botonNegro || textoIngresado.equals("negro")) {
+            setBackground(Color.BLACK);
+            botonNegro.setSelected(true);
+        } else if (botonPulsado == botonAzul || textoIngresado.equals("azul")) {
+            botonAzul.setSelected(true);
+            setBackground(Color.BLUE);
+        }
+    }
+}
